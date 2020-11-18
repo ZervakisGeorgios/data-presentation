@@ -1,0 +1,11 @@
+from tabulate import tabulate
+
+def deco_example(deco):
+    data = [["Header 1", "Header 2", "Header 3"],
+            ["Element 1", "Value 1", "Element 1"],
+            ["Element 2", "Value 2", "Element 2"]]
+    return tabulate(data, headers="firstrow", tablefmt=deco)
+
+print(deco_example("grid")) 
+# other formats: plain, simple, github, fancy_grid, pipe, jira, presto, pretty, psql,
+# rst, mediawiki, moinmoin, youtrack, html, latex, latex_raw, latex_booktabs, textile
